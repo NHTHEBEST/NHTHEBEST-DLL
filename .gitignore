@@ -1,0 +1,6 @@
+.vs/
+nuget.exe
+NHTHEBEST/obj/
+NHTHEBEST/bin/
+tester/
+*.nupkg

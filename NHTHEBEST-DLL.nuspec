@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>NHTHEBEST-DLL</id>
+    <version>1.0.0</version>
+    <authors>NHTHEBEST</authors>
+    <owners>NHTHEBEST</owners>
+    <projectUrl>https://github.com/NHTHEBEST/NHTHEBEST-DLL</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Color Sorting a Simple NetCat and Some Task Management</description>
+    <releaseNotes>Add All Current Features</releaseNotes>
+    <copyright>Copyright 2018 (28/06)</copyright>
+    <tags>NHTHEBEST Color Sorting NetCat Task Management</tags>
+  </metadata>
+  <files>
+	<file src="C:\Users\noam\source\repos\NHTHEBEST-DLL\NHTHEBEST\bin\Release\NHTHEBEST.dll" target="lib/NHTHEBEST.DLL" />
+  </files>
+</package>

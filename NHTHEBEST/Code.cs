@@ -313,14 +313,14 @@ namespace NHTHEBEST
         }
         public class CS
         {
-            public static Action Compile(string code, string namespaceandclass, string mainfunction, string[] ReferencedAssemblies, bool InMem = true, bool Exe = true)
+            public static Action Compile(string code, string namespaceandclass, string mainfunction, string[] ReferencedAssemblies)
             {
                 CSharpCodeProvider provider = new CSharpCodeProvider();
                 CompilerParameters parameters = new CompilerParameters();
                 foreach (string Ref in ReferencedAssemblies)
                     parameters.ReferencedAssemblies.Add(Ref);
-                parameters.GenerateExecutable = Exe;
-                parameters.GenerateInMemory = InMem;
+                parameters.GenerateExecutable = true;
+                parameters.GenerateInMemory = true;
                 CompilerResults results = provider.CompileAssemblyFromSource(parameters, code);
                 if (results.Errors.HasErrors)
                 {

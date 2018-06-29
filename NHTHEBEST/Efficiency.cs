@@ -9,9 +9,9 @@ namespace NHTHEBEST
     {
         public sealed class CPU
         {
-            public static int LogicalProcessors { get; private set; } = Environment.ProcessorCount;
-            public static int PhysicalCores { get; private set; } = GetCores();
-            public static int PhysicalProcessors { get; private set; } = GetPhysicalProcessors();
+            public static int LogicalProcessors { get;} = Environment.ProcessorCount;
+            public static int PhysicalCores { get; } = GetCores();
+            public static int PhysicalProcessors { get; } = GetPhysicalProcessors();
             private static int GetCores()
             {
                 int coreCount = 0;

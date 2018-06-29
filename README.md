@@ -128,9 +128,9 @@ namespace Efficiency
 {
     public sealed class CPU 
     {
-        public static int LogicalProcessors { get; private set; }
-        public static int PhysicalCores { get; private set; }
-        public static int PhysicalProcessors { get; private set; }
+        public static int LogicalProcessors { get; }
+        public static int PhysicalCores { get; }
+        public static int PhysicalProcessors { get; }
     }
 }
 ```

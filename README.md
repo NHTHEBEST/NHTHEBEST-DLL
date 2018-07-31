@@ -37,12 +37,12 @@ namespace Network
 ``` csharp
 namespace Loging 
 {
-    public class Log 
+    public class NetworkLog 
     {
         public string LogServer;
         public int LogSendSize = 10000;
         public void SendLog();
-        public void log(string text);
+        public void Log(object text);
     }
 }
 ```

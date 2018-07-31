@@ -4,7 +4,7 @@ namespace NHTHEBEST
 {
     namespace Loging
     {
-        public class Log
+        public class NetworkLog
         {
             private string logtext = "";
             private WebClient www = new WebClient();
@@ -15,13 +15,17 @@ namespace NHTHEBEST
                 www.UploadString(LogServer, logtext);
                 logtext = "";
             }
-            public void log(string text)
+            private void logadd(string text)
             {
                 logtext = logtext + text;
                 if (logtext.Length >= LogSendSize)
                 {
                     SendLog();
                 }
+            }
+            public void Log(object text)
+            {
+                logadd(text.ToString());
             }
         }
     }

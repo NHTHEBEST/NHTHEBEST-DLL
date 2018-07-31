@@ -10,6 +10,13 @@ namespace NHTHEBEST
 {
     namespace Code
     {
+        public class CompilerOptions
+        {
+            string Code;
+            string NamespaceAndClass;
+            string Main;
+            string[] ReferencedAssemblies;
+        }
         public class javascript
         {
             private static string mModifiedData = "";
@@ -341,8 +348,10 @@ namespace NHTHEBEST
         }
         public class VB
         {
-            public static Action Compile(string code, string namespaceandclass, string mainfunction, string[] ReferencedAssemblies, bool InMem = true, bool Exe = true)
+            public static Action Compile(string code, string namespaceandclass, string mainfunction, string[] ReferencedAssemblies)
             {
+                bool InMem = true;
+                bool Exe = true;
                 VBCodeProvider provider = new VBCodeProvider();
                 CompilerParameters parameters = new CompilerParameters();
                 foreach (string Ref in ReferencedAssemblies)

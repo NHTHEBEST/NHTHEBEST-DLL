@@ -5,20 +5,19 @@
 
  -- *The DLL that has some usfull functions*
  
- 
- ## Functions:
- - NetCat Lib
- - Log *That gets send to server*
- - JS  & CSS Minifyer
- - C# and VB complier - **BETA**
- - Convert image to on color *average color*
- - Console FX
-    - Linux Style Console Log
-    - Linux Style Console Hash Percent Bar
- - CPU info class
- - Task Splitter aka SuperThread
+ ## Functions
+- NetCat Lib
+- Log *That gets send to server*
+- JS  & CSS Minifyer
+- C# and VB complier - **BETA**
+- Convert image to on color *average color*
+- Console FX
+   - Linux Style Console Log
+   - Linux Style Console Hash Percent Bar
+- CPU info class
+- Task Splitter aka SuperThread
 
-### NetCat:
+### NetCat
 ``` csharp
 namespace Network 
 {
@@ -37,7 +36,7 @@ namespace Network
     }
 }
 ```
-### Log:
+### Log
 ``` csharp
 namespace Loging 
 {
@@ -50,7 +49,7 @@ namespace Loging
     }
 }
 ```
-### JS & CSS Minifyer:
+### JS & CSS Minifyer
 ``` csharp
 namespace Code 
 {
@@ -64,7 +63,7 @@ namespace Code
     }
 }
 ```
-### VB & C# Complier **BETA**:
+### VB & C# Complier **BETA**
 ``` csharp
 namespace Code 
 {
@@ -86,7 +85,7 @@ namespace Code
     }
 }
 ```
-### Image to Color:
+### Image to Color
 ``` csharp
 namespace Graphics
 {
@@ -111,7 +110,7 @@ namespace Graphics
     }
 }
 ```
-### Console FX:
+### Console FX
 ``` csharp
 namespace Graphics
 {
@@ -126,7 +125,7 @@ namespace Graphics
     }
 }
 ```
-### CPU Info:
+### CPU Info
 ``` csharp
 namespace Efficiency
 {
@@ -138,7 +137,7 @@ namespace Efficiency
     }
 }
 ```
-### Task Splitter:
+### Task Splitter
 ``` csharp
 namespace Efficiency
 {

@@ -50,13 +50,15 @@ namespace NHTHEBEST
             {
                 int size = Code.Count();
                 int cpu = CPU.LogicalProcessors;
-                if (MaxCoresToUse <= cpu)
+                if (MaxCoresToUse <= cpu){
                     cpu = MaxCoresToUse;
+                }
                 int TaskPerThread = (int)Math.Round((double)size / (double)cpu);
                 List<Thread> threads = new List<Thread>();
                 List<ThreadStart> tasks = new List<ThreadStart>();
-                foreach (Action Task in Code)
+                foreach (Action Task in Code){
                     tasks.Add(new ThreadStart(Task));
+                }
                 ThreadStart[] starts = tasks.ToArray();
                 for (int ii = 1; ii <= TaskPerThread + 1; ii++)
                     for (int i = 1; i <= cpu; i++)

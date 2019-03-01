@@ -9,7 +9,7 @@ namespace NHTHEBEST
             private string logtext = "";
             private WebClient www = new WebClient();
             public string LogServer;
-            private int LogSendSize = 10000;
+            private readonly int LogSendSize = 10000;
             public void SendLog()
             {
                 www.UploadString(LogServer, logtext);

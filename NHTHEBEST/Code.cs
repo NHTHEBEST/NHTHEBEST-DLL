@@ -13,7 +13,6 @@ namespace NHTHEBEST
         public class CompilerOptions
         {
             string Code;
-           // string NamespaceAndClass;
             string Main;
             string[] ReferencedAssemblies;
         }
@@ -57,10 +56,6 @@ namespace NHTHEBEST
                     {
                         thisChar = ' ';
                     }
-/*                    else if (thisChar == '\t')
-                    {
-                        thisChar = '\n';
-                    }*/
                     else if (thisChar == '\r')
                     {
                         thisChar = '\n';
@@ -175,7 +170,7 @@ namespace NHTHEBEST
 
             }
         }
-        public class css
+        public static class css
         {
             private static string mModifiedData = "";
             private static BinaryReader GenerateStreamFromString(string s)
@@ -211,14 +206,18 @@ namespace NHTHEBEST
                     thisChar = mReader.ReadByte();
 
                     if (thisChar == '\t')
+                    {
                         thisChar = ' ';
-                    else if (thisChar == '\t')
-                        thisChar = '\n';
+                    }
                     else if (thisChar == '\r')
+                    {
                         thisChar = '\n';
+                    }
 
                     if (thisChar == '\n')
+                    {
                         ignore = true;
+                    }
 
                     if (thisChar == ' ')
                     {

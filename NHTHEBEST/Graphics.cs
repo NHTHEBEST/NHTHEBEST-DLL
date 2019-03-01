@@ -173,11 +173,17 @@ namespace NHTHEBEST
                 }
                 string num;
                 if (LogNum <= 9)
+                {
                     num = "  " + LogNum.ToString() + "  ";
+                }
                 else if (LogNum <= 99)
+                {
                     num = "  " + LogNum.ToString() + " ";
+                }
                 else
+                {
                     num = " " + LogNum.ToString() + " ";
+                }
                 Console.Write(" [" + num + "] ");
                 LogNum++;
             }

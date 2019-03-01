@@ -43,7 +43,7 @@ namespace NHTHEBEST
                     streamr = new StreamReader(stream);
                 }
             }
-            public void Dispose()
+            public void Dispose() // Noncompliant
             {
                 try
                 {

@@ -35,7 +35,6 @@ namespace NHTHEBEST
         {
             public List<Action> Code { get; set; }
             public int MaxCoresToUse { get; set; } = CPU.LogicalProcessors;
-            private Thread[] Athreads;
             private Thread master;
             public void Join()
             {
@@ -48,6 +47,7 @@ namespace NHTHEBEST
             }
             private void Run()
             {
+                Thread[] Athreads;
                 int size = Code.Count();
                 int cpu = CPU.LogicalProcessors;
                 if (MaxCoresToUse <= cpu){
@@ -61,16 +61,23 @@ namespace NHTHEBEST
                 }
                 ThreadStart[] starts = tasks.ToArray();
                 for (int ii = 1; ii <= TaskPerThread + 1; ii++)
-                    for (int i = 1; i <= cpu; i++)
-                        try { threads.Add(new Thread(starts[i - 1])); }
-                        catch { }
+                {
+                    for (int i = 1; i <= cpu; i++) { 
+                    try { threads.Add(new Thread(starts[i - 1])); }
+                    catch { }
+                    }
+                }
                 Athreads = threads.ToArray();
                 for (int i = 0; i <= TaskPerThread; i += cpu)
                 {
                     for (int ii = 0; ii <= cpu; ii++)
+                    {
                         Athreads[i + ii].Start();
+                    }
                     for (int ii = 0; ii <= cpu; ii++)
+                    {
                         Athreads[i + ii].Join();
+                    }
                 }
             }
         }

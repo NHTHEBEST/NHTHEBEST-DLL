@@ -130,7 +130,11 @@ namespace NHTHEBEST
                     line += p.ToString() + "%";
                 Console.Write(line + "\r");
             }
-            public static void ColorLog(object data, LogStatus status = LogStatus.OK)
+            public static void ColorLog(object data)
+            {
+                ColorLog(data, LogStatus.OK);
+            }
+            public static void ColorLog(object data, LogStatus status)
             {
                 string LogText = data.ToString();
                 Console.Write(" [  ");

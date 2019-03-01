@@ -13,7 +13,7 @@ namespace NHTHEBEST
         public class CompilerOptions
         {
             string Code;
-            string NamespaceAndClass;
+           // string NamespaceAndClass;
             string Main;
             string[] ReferencedAssemblies;
         }
@@ -35,7 +35,7 @@ namespace NHTHEBEST
             {
                 BinaryReader mReader = GenerateStreamFromString(code);
                 int lastChar = 1;                   // current byte read
-                int thisChar = -1;                  // previous byte read
+                int thisChar;// = -1;                  // previous byte read
                 int nextChar = -1;                  // byte read in peek()
                 bool endProcess = false;            // loop control
                 bool ignore = false;                // if false then add byte to final output
@@ -54,14 +54,22 @@ namespace NHTHEBEST
                     thisChar = mReader.ReadByte();
 
                     if (thisChar == '\t')
+                    {
                         thisChar = ' ';
-                    else if (thisChar == '\t')
+                    }
+/*                    else if (thisChar == '\t')
+                    {
                         thisChar = '\n';
+                    }*/
                     else if (thisChar == '\r')
+                    {
                         thisChar = '\n';
+                    }
 
                     if (thisChar == '\n')
+                    {
                         ignore = true;
+                    }
 
                     if (thisChar == ' ')
                     {
@@ -318,7 +326,7 @@ namespace NHTHEBEST
 
             }
         }
-        public class CS
+        public static class CS
         {
             public static Action Compile(string code, string namespaceandclass, string mainfunction, string[] ReferencedAssemblies)
             {
@@ -346,7 +354,7 @@ namespace NHTHEBEST
                 return (Action)Delegate.CreateDelegate(typeof(Action), main);
             }
         }
-        public class VB
+        public static class VB
         {
             public static Action Compile(string code, string namespaceandclass, string mainfunction, string[] ReferencedAssemblies)
             {

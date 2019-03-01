@@ -2,23 +2,24 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/cc6320fa166643e59e66c7ebb38ff33a)](https://app.codacy.com/app/NHTHEBEST/NHTHEBEST-DLL?utm_source=github.com&utm_medium=referral&utm_content=NHTHEBEST/NHTHEBEST-DLL&utm_campaign=Badge_Grade_Dashboard)
 
+ \-- _The DLL that has some usfull functions_
 
- -- *The DLL that has some usfull functions*
- 
- ## Functions
-- NetCat Lib
-- Log *That gets send to server*
-- JS  & CSS Minifyer
-- C# and VB complier - **BETA**
-- Convert image to on color *average color*
-- Console FX
-   - Linux Style Console Log
-   - Linux Style Console Hash Percent Bar
-- CPU info class
-- Task Splitter aka SuperThread
+## Functions
+
+-   NetCat Lib
+-   Log _That gets send to server_
+-   JS  & CSS Minifyer
+-   C# and VB complier - **BETA**
+-   Convert image to on color _average color_
+-   Console FX
+    -   Linux Style Console Log
+    -   Linux Style Console Hash Percent Bar
+-   CPU info class
+-   Task Splitter aka SuperThread
 
 ### NetCat
-``` csharp
+
+```csharp
 namespace Network 
 {
     class NetCat 
@@ -36,8 +37,10 @@ namespace Network
     }
 }
 ```
+
 ### Log
-``` csharp
+
+```csharp
 namespace Loging 
 {
     public class NetworkLog 
@@ -49,8 +52,10 @@ namespace Loging
     }
 }
 ```
+
 ### JS & CSS Minifyer
-``` csharp
+
+```csharp
 namespace Code 
 {
     public class javascript
@@ -63,8 +68,10 @@ namespace Code
     }
 }
 ```
+
 ### VB & C# Complier **BETA**
-``` csharp
+
+```csharp
 namespace Code 
 {
     public class CS
@@ -85,8 +92,10 @@ namespace Code
     }
 }
 ```
+
 ### Image to Color
-``` csharp
+
+```csharp
 namespace Graphics
 {
     public class SortImgs
@@ -110,8 +119,10 @@ namespace Graphics
     }
 }
 ```
+
 ### Console FX
-``` csharp
+
+```csharp
 namespace Graphics
 {
     public class ConsoleFX
@@ -125,8 +136,10 @@ namespace Graphics
     }
 }
 ```
+
 ### CPU Info
-``` csharp
+
+```csharp
 namespace Efficiency
 {
     public sealed class CPU 
@@ -137,8 +150,10 @@ namespace Efficiency
     }
 }
 ```
+
 ### Task Splitter
-``` csharp
+
+```csharp
 namespace Efficiency
 {
     public class SuperThread 
